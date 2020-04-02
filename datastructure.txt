@@ -1,0 +1,217 @@
+Java Practice qs:
+Q1) Write an algorithm to merge 2 sorted arrays in descending order
+Q2) Write a Java program to move the last element of the linked list in the front and rest of the
+ element by one position, and then print the modified linked list.
+
+NOTE: Remember you cannot use the LinkedList java class and its methods, you have to make your 
+own LinkedList class and methods.
+
+Input Format
+The first line denotes the number of integers n in the linked list.
+Next n lines contain n integers to be included in the linked list.
+
+Output Format
+The output contains n space-separated integers of the modified linked list.
+
+Hint: Maintain two pointers in the list, one for the last element and the other to keep 
+a track of its previous node.
+
+Sample Test Cases
+
+Sample Input
+
+5
+7 
+32 
+81 
+47 
+78
+
+Sample Output
+
+78 7 32 81 47
+
+Q3) In a company there are exactly N managers and M subordinates. Each of these managers manage arbitrary number of subordinates.
+ However, each subordinate is managed by exactly one manager. For each subordinate you are given the subordinate's name and age.
+
+We need to print the name of the manager and the name and age of the subordinates that he/she manages. However, 
+there is a catch here. We need to print the list of manger in Lexicographical order of their names and each manager
+ should contain list of sub-ordinates he/she manages.
+
+In addition, the subordinates appearing in individual managers list should appear in Increasing order of their Age.
+
+Note: Lexicographic or lexicographical order is a generalization of the way words are alphabetically ordered based on the 
+alphabetical order of their component letters.
+
+Input Format
+The first line contains two integers N and M denoting the number of managers and the number of subordinates respectively.
+Each of the next N lines contain a single string denoting a manager’s name.
+It is guaranteed that each manager's name shall be unique.
+The next M lines contain 2 Strings and an Integer - denoting the manager's name, a subordinate's name being managed by that
+ manager and that subordinate's Age. 
+It is guaranteed that each subordinate's name shall be unique and shall appear only once in the Input.
+
+Output Format
+
+Your output should:
+Print N+M lines.
+Print the manager's name first and then the name and age of each subordinate managed by that manager.
+The list of each manager should appear in order of their lexicographical rank in comparison to all other managers. For example, the list of the manager with the lexicographically smallest name should appear first, then the list of the manager with the 2nd smallest lexicographical name and so on.
+The subordinates in a managers list should appear in increasing order of their age.
+
+Constraints
+1<= N<=1000
+1<= M < 107
+1<= Age of each subordinate <= 106
+1<= length of subordinate & manager name <=35
+Strings are case-sensitive. For example, string ’learner’ & ‘Learner’ are different.
+The Name of each manager and subordinate will consist of lower-case alphabets only.
+It is guaranteed that no two subordinates with the same age shall appear in the same manager's List.
+Hint: You need to use Comparable Interface here.
+
+Sample Test Cases
+
+Sample Input
+
+3 4
+robin
+peter
+kelvin
+robin eric 21
+kelvin john 22
+peter bob 19
+robin tourist 19
+
+Sample Output
+
+kelvin
+john 22
+peter
+bob 19
+robin
+tourist 19
+eric 21
+
+Q4) Write a Java program that takes an array of strings as input and returns the sorted array. 
+ Use the Quick Sort algorithm for this program.
+
+Sorting needs to be done based on the size of each string. So, a string with fewer characters should come 
+before another string with a greater number of characters. Also, in case of strings having the same size, 
+it is NOT to be sorted in alphabetical order.
+
+As Quick Sort is not a stable sorting algorithm, the order of the input strings passed also need NOT be maintained 
+in that case. Just implement the Quick Sort algorithm correctly based on size of strings to get the desired output.
+
+NOTE: The code will take the size of the array and its elements as inputs.
+
+Constraints            
+Strings are case-sensitive. For example, string ’learner’ & ‘Learner’ are different. 
+
+Input Format
+ The first line denotes the number of strings n to be inserted in the array.
+ The next n lines contain all the strings to be inserted in the array.
+Output Format
+ For n lines of input, print n lines containing sorted strings based on the size of each string.
+
+Sample Test Cases
+
+Sample Input
+
+8
+Charles
+Thomas
+Zonas
+Lee
+Anderson
+Parker
+Neo
+Vaughan
+
+Sample Output
+
+Lee
+Neo
+Zonas
+Parker
+Thomas
+Charles
+Vaughan
+Anderson
+
+Sample Input
+
+4
+Reshma
+Ayushi
+Ashish
+Sahiti
+
+Sample Output
+
+Reshma
+Ayushi
+Ashish
+Sahiti
+
+Q5) Write a Java program to: Find and remove the duplicate strings in a linked
+  list. Store the strings in a linked list and then traverse it to find the
+  duplicates, delete them from the list and do the proper linking of the
+  previous and the next element in the list. NOTE: Don’t use the methods of
+  LinkedList class of Java, write your own logic. Although, you can use the
+  methods of the String class.
+  
+  Constraints While removing the duplicate element, you should exclude the
+  first occurrence of the element. Strings are case-sensitive. For example,
+  string ’learner’ & ‘Learner’ are different. Input Format The first line
+  denotes the number of integers n in the linked list. The next n lines contain
+  n strings to be included in the linked list.
+  
+  Output Format The output contains the strings in the same sequence but
+  without duplicates.
+  
+  Sample Test Cases
+  
+  Sample Input
+  
+  6 Hello World Data Structure Building Blocks test test Data Structure
+  
+  Sample Output
+  
+  Hello World Data Structure Building Blocks test
+
+Q6) Write a Java program to insert the input values into an ArrayList
+  and print the sum of elements (integers) present at even index of the ArrayList. 
+  You have to use an iterator to read all the elements of the list.
+
+Input Format
+The first line denotes the number of integers n to be inserted in the ArrayList.
+Next n lines contain n integers to be included in the ArrayList.
+
+Output Format
+The output should contain the sum of the elements present at even indexes.
+
+Sample Test Cases
+
+Sample Input
+
+5
+55 
+24 
+36 
+64 
+76
+
+Sample Output
+167
+
+Q7) ou will be given 6 integers as mentioned in the input format. Store them in an ArrayList. After that, you have to use various methods of the ArrayList class and implement the following sequence of actions on that ArrayList: 
+
+1. Print the 3rd element from the beginning
+2. Replace the 5th element from the beginning with integer 8
+3. Print the 5th element from the beginning
+4. Print the index of the element 56
+5. Add the element 44 at index 2
+6. Print the 5th element from the beginning
+7. Remove the element at index 1
+8. Print the index of the element 9
+
