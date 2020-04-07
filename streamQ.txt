@@ -1,0 +1,34 @@
+Q1) Given the code fragment:
+
+Stream.of(1).peek(
+    ((Consumer<Integer>)(i1)->{i1 = i1 + 1;})
+     .andThen((i2)->{i2 = i2 + 2;}))
+  .forEach(System.out::print);
+What would be the output?
+
+Q2) Given the code fragment:
+
+Stream.of(1).forEach(
+    		    ((Consumer<Integer>)(i1)->{i1 = i1 + 1;})
+    		     .andThen((i2)->{i2 = i2 + 2;}).andThen(System.out::print));
+What would be the output?
+
+Q3) What is the difference between Stream.of(1) and IntStream.of(1)?
+
+Q4) 	int i1= 1;
+    	Stream.of(1).forEach(
+    		    ((Consumer<Integer>)(x)->{i1 = x + 1;})
+    		     .andThen((i2)->{i2 = i2 + 2;}).andThen(System.out::print));
+What should be the output of this code?
+
+Q5) Given this code fragment:
+
+Predicate<Integer> p1 = (i1) -> i1 > 9;
+Predicate<Integer> p2 = (i2) -> i2 % 2 == 0;
+Predicate<Integer> p3 = (i3) -> i3 > 19;        
+boolean result = p1.and(p2.negate()).and(Predicate.not(p3)).test(i);
+Which of the following arguments will cause the result to be true? 
+9  10	11 19	21
+o/p: 11, 19
+
+Q6) 
